@@ -213,3 +213,34 @@ updated_at:datetime
 
 belongs_to comment
 ```
+
+### Micro-Reddit Schema
+---
+
+```
+user:table
+
+id:integer
+created_at:datetime
+updated_at:datetim
+
+email:string [presence, unique]
+username:string [presence, unique]
+
+has_many Post
+```
+
+```
+post:table
+
+id:integer
+created_at:datetime
+updated_at:datetim
+
+title:string [present]
+body:text [present]
+comment:text
+
+belongs_to user
+```
+
